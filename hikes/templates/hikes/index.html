@@ -1,0 +1,45 @@
+{% extends 'hikes/base.html' %}
+{% block hikes_active %}active{% endblock %}
+{% block body %}
+
+
+<div class="container-fluid">
+	<!-- edit this out probably or change up jumbotron-style -->
+	<div class="jumbotron">
+		<h1 class="display-3">Take a Walk!</h1>
+		<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+		<hr class="m-y-2">`
+		<p class="lead">
+		  
+		</p>
+	</div>
+		<div class="panel panel-default" id="HikeListing">
+			{% if all_hikes %}
+			<div class="row">
+			<!-- <ul> for a list of hike names if looks better-->
+				<h1 id="index-header">Local Hikes in Boulder:</h1>
+				{% for hike in all_hikes %}
+					<div class="col-sm-4 col-lg-2">
+						<div class="thumbnail">
+							<a href="{% url 'hikes:detail' hike.id %}">
+								<img class="img-responsive" height="300px" width="300px" src="{{ hike.hike_image.url }}">
+							</a>
+							
+						<!-- <li> -->		
+								<a href="{% url 'hikes:detail' hike.id %}">{{ hike.hike_title }}</a>
+						<!-- </li> -->
+						</div>
+					</div>
+				{% endfor %}
+			<!-- </ul> -->
+			</div>
+			{% else %}
+				<h3>You have no hikes</h3>
+			{% endif %}
+		</div>
+	
+
+	<!-- Need more information describing website -->
+	
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'forum/base.html' %}
+{% block forum_active %}active{% endblock %}
+{% block body %}
+	<div class="container-fluid">
+			
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="well">
+							<h1>{{ forum.article_title }}</h1>
+							<h3>{{ forum.article_subject }}</h3>
+							<p>{{ forum.article_body }}</p>
+							<h4>Posted by {{ forum.user }}</h4>
+						</div>
+					</div>
+					<div class="row">
+						
+							<h4><strong>Comments</strong></h4>
+							{% for comment in forum.comment_set.all %}
+								<div class="well">
+									<h5>{{ comment.forum_comment }}</h5>
+									<h6>Posted by {{ comment.user }}</h6>
+								</div>
+							{% endfor %}
+						
+							
+						
+					</div>
+					<!-- Must change to button -->
+					<a href="{% url 'forum:create_comment' forum.id %}" class="btn btn-success">Add New Comment</a>
+				</div>
+			</div>
+	</div>
+{% endblock %}

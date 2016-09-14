@@ -1,0 +1,51 @@
+{% extends 'forum/base.html' %}
+{% block title %}Add a New Comment{% endblock %}
+{% block forum_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    
+
+        <!-- Forum Info -->
+        <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="well">
+                            <h1>{{ forum.article_title }}</h1>
+                            <h3>{{ forum.article_subject }}</h3>
+                            <p>{{ forum.article_body }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                            <h4><strong>Comments</strong></h4>
+                            {% for comment in forum.comment_set.all %}
+                                <div class="well">
+                                    <h5>{{ comment.forum_comment }}</h5>
+                                </div>
+                            {% endfor %}
+                    </div>
+                    <!-- Comment Form -->
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="forum" value="{{ forum }}">
+                        <div class="row">
+                        {% include 'forum/form_template.html' %}
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-success">Post</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+
+
+        
+
+
+</div>
+
+{% endblock %}

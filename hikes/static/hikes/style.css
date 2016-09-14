@@ -1,0 +1,142 @@
+body {
+	background-image: url(../hikes/img/bw_mountain.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+ul {
+	list-style: none;
+}
+
+.panel {
+	margin-left: 10%;
+	margin-right: 10%;
+	background:rgba(255,255,255,0.5);
+}
+
+.panel  h1 h4 p {
+	color: white;
+}
+
+.well {
+	margin-left: 10%;
+	margin-right: 10%;
+	background:rgba(255,255,255,0.5);
+}
+
+#index-header {
+	margin-left: 20px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+#footer {
+	background: black;
+}
+
+footer .panel {
+	background: black;
+	border: none; 
+}
+
+footer .panel-footer {
+	background: black;
+	border: none;
+}
+
+#hike_well {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#HikeCarousel {
+	margin-top: 150px;
+	width: 100%;
+	background-color: black; 
+}
+
+#HikeCarousel h3 {
+	color: white;
+}
+
+#HikeCarousel h6 {
+	color: white;
+}
+
+#HikeCarousel p {
+	color: white;
+}
+
+#CampusImg {
+	height: 400px;
+	width: 100%;
+	background-image: url(../hikes/img/gross_forest_reflection.jpg); 
+	background-attachment: fixed;
+  	background-position: top center;
+  	background-size: cover;
+}
+
+#CampusCarousel {
+	background: black;
+	width: 100%;
+}
+
+/*.content .col-sm-4 {
+	background:rgba(255,255,255,0.5);
+}
+
+.content .col-lg-8 {
+	background:rgba(255,255,255,0.5);
+}*/
+
+#myCarousel {
+	margin-top: 30px;
+	margin-bottom: 20px; 
+}
+.navbar {
+	background: transparent;
+}
+
+.jumbotron {
+	background:rgba(255,255,255,0.5);
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.jumbotron h1 p hr a {
+	color: white;
+}
+
+#ForumInfo {
+	color: #3247c5;
+	text-align: center;
+	background:rgba(255,255,255,0.5);
+	border-radius: 15px;
+}
+
+#ForumInfo h1 p {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 100;
+}
+
+#HikeListing {
+	margin-top: 30px;
+}
+
+#id_forum_comment {
+	width: 50%;
+	border-radius: 5px;
+}
+
+#id_article_body {
+	width: 50%;
+	height: 100px;
+	border-radius: 5px;
+}
+
+

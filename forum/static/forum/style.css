@@ -1,0 +1,38 @@
+body {
+	background: black;
+}
+
+ul {
+	list-style: none;
+}
+
+.panel {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.panel  h1 h4 p {
+	color: white;
+}
+
+
+
+#index-header {
+	margin-left: 20px;
+}
+
+
+.footer {
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    margin: 0;
+    background-color: #14292b;
+    height: 100px;
+}
+
+.footer h4 {
+	color: white;
+	text-align: center;
+}
+

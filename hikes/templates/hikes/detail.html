@@ -1,0 +1,41 @@
+{% extends 'hikes/base.html' %}
+{% block hikes_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+        <!-- Hike Image and Title info -->
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{% url 'hikes:detail' hike.id %}">
+                        {% if hike.hike_image %}
+                            <img src="{{ hike.hike_image.url }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                                {% endif %}
+                    </a>
+                    <h1>{{ hike.hike_title }}         
+                </div>
+            </div>
+        </div>
+        <!-- Hike Map -->
+        <div class="col-sm-8 col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>Map of the {{ hike.hike_title }} trail</h4>
+                    <iframe src="{{ hike.hike_map }}" width="100%" height="500px"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Hike Description -->
+    <div class="row">
+        <div class="well">
+            <h4>{{ hike.hike_title }} Description</h4>
+            <p>{{ hike.hike_description }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
