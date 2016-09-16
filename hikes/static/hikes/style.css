@@ -12,7 +12,7 @@ ul {
 .panel {
 	margin-left: 10%;
 	margin-right: 10%;
-	background:rgba(255,255,255,0.5);
+	background:rgba(255,255,255,0.25);
 }
 
 .panel  h1 h4 p {
@@ -22,7 +22,8 @@ ul {
 .well {
 	margin-left: 10%;
 	margin-right: 10%;
-	background:rgba(255,255,255,0.5);
+	margin-top: -10px;
+	background:rgba(91,132,125,0.5);
 }
 
 #index-header {
@@ -75,7 +76,9 @@ footer .panel-footer {
 #CampusImg {
 	height: 400px;
 	width: 100%;
-	background-image: url(../hikes/img/gross_forest_reflection.jpg); 
+	background-image: url(../hikes/img/UMC2.jpg);
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 	background-attachment: fixed;
   	background-position: top center;
   	background-size: cover;
@@ -84,6 +87,7 @@ footer .panel-footer {
 #CampusCarousel {
 	background: black;
 	width: 100%;
+	padding-bottom: 4em;
 }
 
 /*.content .col-sm-4 {
@@ -103,7 +107,11 @@ footer .panel-footer {
 }
 
 .jumbotron {
-	background:rgba(255,255,255,0.5);
+	background:rgba(255,255,255,0.25);
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
 	width: 1000px;
 	margin: 0 auto;
 }
@@ -115,8 +123,9 @@ footer .panel-footer {
 #ForumInfo {
 	color: #3247c5;
 	text-align: center;
-	background:rgba(255,255,255,0.5);
+	background:rgba(235,235,235,0.5);
 	border-radius: 15px;
+	margin-bottom: 2em;
 }
 
 #ForumInfo h1 p {
@@ -139,4 +148,21 @@ footer .panel-footer {
 	border-radius: 5px;
 }
 
+#ForumForm {
+	margin: 0 auto ;
+}
 
+#ForumPost {
+	background: rgba(91, 132, 125, 0.66);
+	border-radius: 5px;
+	padding: 10px 10px 10px;
+}
+#ForumTitle {
+	margin-left: 20px
+}
+
+.CommentHeader {
+	margin-left: 5em;
+	font-weight: bold;
+
+}

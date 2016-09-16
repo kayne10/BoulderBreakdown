@@ -13,11 +13,16 @@
 	<!-- Listing Forum Articles -->
 	{% for forum in all_forums %}
 	<div class="row">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<h4><strong>Title:</strong></h4><a href="{% url 'forum:detail' forum.id %}"><h4>{{ forum.article_title }}</h4></a>
-				<h5><strong>Subject:</strong></h5><h5>{{ forum.article_subject }}</h5>
-				<p>Posted by {{ forum.user }}</p>
+		<div class="col-md-10">
+			<div class="panel panel-default" id="ForumPost">
+				<div class="panel-header">
+					<h4 id="ForumTitle"><strong>Title: <a href="{% url 'forum:detail' forum.id %}">
+					{{ forum.article_title }}</a></strong></h4>
+				</div>
+				<div class="panel-body">
+					<h5><strong>Subject: {{ forum.article_subject }}</strong></h5>
+					<p>Posted by {{ forum.user }}</p>
+				</div>
 			</div>
 		</div>
 	</div>
