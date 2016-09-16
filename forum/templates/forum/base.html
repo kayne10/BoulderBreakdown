@@ -85,9 +85,10 @@
         <div class="panel-body">
           <h4>Main Navigation</h4>
           <ul>
-            <li>Hikes</li>
-            <li>Campus</li>
-            <li>Forum</li>
+            <li><a href="{% url 'hikes:home' %}">Home</a></li>
+            <li><a href="{% url 'hikes:index' %}">Hikes</a></li>
+            <li><a href="{% url 'campus:index' %}">Campus</a></li>
+            <li><a href="{% url 'forum:index' %}">Forum</a></li>
           </ul>
         </div>
       </div>
@@ -98,7 +99,7 @@
           <h4>Supplementary Info</h4>
           <ul>
             <li>Contact</li>
-            <li>More Info</li>
+            <li><a href="{% url 'hikes:info' %}">More Info</a></li>
             <li>Photography</li>
           </ul>
         </div>

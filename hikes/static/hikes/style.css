@@ -77,6 +77,17 @@ footer .panel-footer {
 	height: 400px;
 	width: 100%;
 	background-image: url(../hikes/img/UMC2.jpg);
+	/*-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);*/
+	background-attachment: fixed;
+  	background-position: top center;
+  	background-size: cover;
+}
+
+#CampusImg2 {
+	height: 410px;
+	width: 100%;
+	background-image: url(../hikes/img/home3.jpg);
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	background-attachment: fixed;
@@ -107,7 +118,7 @@ footer .panel-footer {
 }
 
 .jumbotron {
-	background:rgba(255,255,255,0.25);
+	background:rgba(0,0,0,0.25);
 	-webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
@@ -120,10 +131,14 @@ footer .panel-footer {
 	color: white;
 }
 
+.jumbotron h1, p {
+	color: white;
+}
+
 #ForumInfo {
 	color: #3247c5;
 	text-align: center;
-	background:rgba(235,235,235,0.5);
+	background:rgba(0,0,0,0.5);
 	border-radius: 15px;
 	margin-bottom: 2em;
 }
