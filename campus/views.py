@@ -7,3 +7,12 @@ from .models import CampusObject
 def index(request):
 	all_campus_objects = CampusObject.objects.all()
 	return render(request, 'campus/index.html', {'all_campus_objects': all_campus_objects})
+
+def restaurants(request):
+	return render(request, 'campus/restaurants.html')
+
+def live_music(request):
+	return render(request, 'campus/live_music.html')
+
+def recreational_dispos(request):
+	return render(request, 'campus/recreational_dispos.html')
