@@ -22,3 +22,7 @@ def detail(request, hike_id):
 def home(request):
 	all_hikes = Hike.objects.all()
 	return render(request, 'hikes/home.html', {'all_hikes': all_hikes})
+
+def ratings(request):
+	return render(request, 'hikes/ratings.html')
+

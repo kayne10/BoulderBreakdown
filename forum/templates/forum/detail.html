@@ -10,7 +10,7 @@
 							<h1>{{ forum.article_title }}</h1>
 							<h3>{{ forum.article_subject }}</h3>
 							<p>{{ forum.article_body }}</p>
-							<h4>Posted by {{ forum.user }}</h4>
+							<h4 class="author">Posted by {{ forum.user }}</h4>
 						</div>
 					</div>
 					<div class="row">
@@ -19,7 +19,7 @@
 							{% for comment in forum.comment_set.all %}
 								<div class="well">
 									<h5>{{ comment.forum_comment }}</h5>
-									<h6>Posted by {{ comment.user }}</h6>
+									<h6 class="author">Posted by {{ comment.user }}</h6>
 								</div>
 							{% endfor %}
 						

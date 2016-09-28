@@ -5,35 +5,38 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-12" id="ForumInfo">
-			<h1>Boulder Breakdown Forum</h1>
+			<h1 class="forumHeader">Boulder Breakdown Forum</h1>
 			<p>Have any questions, comments, or concerns about a hike or local restaurant in Boulder? Post it right here in the Breakdown's Forum</p>
 			<p>You must sign up or sign in to make a new forum</p>
 		</div>
 	</div>
-	<!-- Listing Forum Articles -->
-	{% for forum in all_forums %}
-	<div class="row">
-		<div class="col-md-10">
-			<div class="panel panel-default" id="ForumPost">
-				<div class="panel-header">
-					<h4 id="ForumTitle"><strong>Title: <a href="{% url 'forum:detail' forum.id %}">
-					{{ forum.article_title }}</a></strong></h4>
-				</div>
-				<div class="panel-body">
-					<h5><strong>Subject: {{ forum.article_subject }}</strong></h5>
-					<p>Posted by {{ forum.user }}</p>
+
+	<div class="forum-fluid">
+		<!-- Listing Forum Articles -->
+		{% for forum in all_forums %}
+		<div class="row">
+			<div class="col-md-10">
+				<div class="panel panel-default" id="ForumPost">
+					<div class="panel-header">
+						<h4><strong>Title: <a href="{% url 'forum:detail' forum.id %}" class="forumTitle">
+						{{ forum.article_title }}</a></strong></h4>
+					</div>
+					<div class="panel-body">
+						<h5><strong>Subject: {{ forum.article_subject }}</strong></h5>
+						<p class="author">Posted by {{ forum.user }}</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	{% endfor %}
-	<!-- Add New Forum Button -->
-		<div class="col-sm-12" style="margin-left:110px;">
-                <a href="{% url 'forum:create_forum' %}">
-                    <button type="button" class="btn btn-success">
-                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add Forum
-                    </button>
-                </a>
-        </div>
+		{% endfor %}
+		<!-- Add New Forum Button -->
+			<div style="margin-left:110px; margin-bottom: 20px;">
+	                <a href="{% url 'forum:create_forum' %}">
+	                    <button type="button" class="btn btn-success">
+	                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add Forum
+	                    </button>
+	                </a>
+	        </div>
+    </div>
 </div>
 {% endblock %}
