@@ -248,3 +248,17 @@ footer .panel-footer {
 .mapping-info article p, .photography-info article p {
 	padding:20px 10px 20px 10px;
 } 
+
+.info-header-3 {
+	text-decoration: underline;
+	color: rgb(255,255,255); 
+}
+
+/*End of Info Page*/
+
+/* Login and Register Page */
+#login-panel {
+	margin-bottom: 100px;
+}
+
+

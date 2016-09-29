@@ -9,5 +9,5 @@ urlpatterns = [
 	url(r'^info/$', views.info, name='info'),
 	url(r'^hikes/$', views.index, name='index'),
 	url(r'^(?P<hike_id>[0-9]+)/$', views.detail, name='detail'),
-	# url(r'^ratings/$', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
+	url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
 ]

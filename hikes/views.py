@@ -15,9 +15,10 @@ def info(request):
 def detail(request, hike_id):
     try:
     	hike = Hike.objects.get(pk=hike_id)
+    	ratings = Hike.objects.filter(id=hike_id).order_by('ratings_average')
     except Hike.DoesNotExist:
     	raise Http404("Hike does not exist")
-    return render(request, 'hikes/detail.html', {'hike': hike})
+    return render(request, 'hikes/detail.html', {'hike': hike, 'ratings': ratings})
 
 def home(request):
 	all_hikes = Hike.objects.all()
