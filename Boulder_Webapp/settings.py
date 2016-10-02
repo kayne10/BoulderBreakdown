@@ -77,24 +77,24 @@ WSGI_APPLICATION = 'Boulder_Webapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-# When connecting to real mysql database
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'BoulderBreakdown',
-#         'USER': 'root',
-#         'PASSWORD': 'buzchop1',
-#         'HOST': 'localhost',
-#         'PORT': '',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+# When connecting to real mysql database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'BoulderBreakdown',
+        'USER': 'root',
+        'PASSWORD': 'buzchop1',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 
 # Password validation

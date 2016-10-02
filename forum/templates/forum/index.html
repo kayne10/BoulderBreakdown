@@ -12,31 +12,46 @@
 	</div>
 
 	<div class="forum-fluid">
-		<!-- Listing Forum Articles -->
-		{% for forum in all_forums %}
-		<div class="row">
-			<div class="col-md-10">
-				<div class="panel panel-default" id="ForumPost">
-					<div class="panel-header">
-						<h4><strong>Title: <a href="{% url 'forum:detail' forum.id %}" class="forumTitle">
-						{{ forum.article_title }}</a></strong></h4>
-					</div>
-					<div class="panel-body">
-						<h5><strong>Subject: {{ forum.article_subject }}</strong></h5>
-						<p class="author">Posted by {{ forum.user }}</p>
+		{% if all_forums %}
+			<!-- Listing Forum Articles -->
+			{% for forum in all_forums %}
+			<div class="row">
+				<div class="col-md-10">
+					<div class="panel panel-default" id="ForumPost">
+						<div class="panel-header">
+							<h4><strong>Title: <a href="{% url 'forum:detail' forum.id %}" class="forumTitle">
+							{{ forum.article_title }}</a></strong></h4>
+						</div>
+						<div class="panel-body">
+							<h5><strong>Subject: {{ forum.article_subject }}</strong></h5>
+							<p class="author">Posted by {{ forum.user }}</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		{% endfor %}
-		<!-- Add New Forum Button -->
-			<div style="margin-left:110px; margin-bottom: 20px;">
-	                <a href="{% url 'forum:create_forum' %}">
-	                    <button type="button" class="btn btn-success">
-	                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add Forum
-	                    </button>
-	                </a>
-	        </div>
-    </div>
+
+
+			{% endfor %}
+			<!-- Add New Forum Button -->
+					<div style="margin-left:110px; margin-bottom: 20px;">
+			                <a href="{% url 'forum:create_forum' %}">
+			                    <button type="button" class="btn btn-success">
+			                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add Forum
+			                    </button>
+			                </a>
+			        </div>
+
+
+			{% else %}
+				<!-- Add New Forum Button -->
+					<div style="margin-left:110px; margin-bottom: 20px;">
+			                <a href="{% url 'forum:create_forum' %}">
+			                    <button type="button" class="btn btn-success">
+			                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add Forum
+			                    </button>
+			                </a>
+			        </div>
+	    </div>
+	    {% endif %}
 </div>
 {% endblock %}
