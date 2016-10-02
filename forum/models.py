@@ -10,7 +10,7 @@ class Forum(models.Model):
 	article_title = models.CharField(max_length=250)
 	article_subject = models.CharField(max_length=250)
 	article_body = models.TextField(max_length=2000)
-	# timestamp = models.DateTimeField(auto_now_add=True)
+	created_at = models.DateTimeField(auto_now_add=True)
 	# comments = models.PositiveIntegerField()
 
 	def __str__(self):
@@ -21,7 +21,7 @@ class Comment(models.Model):
 	user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
 	forum = models.ForeignKey(Forum, on_delete=models.CASCADE)
 	forum_comment = models.TextField(max_length=1000)
-	# timestamp = models.DateTimeField(auto_now_add=True)
+	created_at = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return self.forum_comment + '-' + self.user.username
