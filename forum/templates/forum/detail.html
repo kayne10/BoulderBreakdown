@@ -11,12 +11,11 @@
 							<h3>{{ forum.article_subject }}</h3>
 							<p>{{ forum.article_body }}</p>
 							<h4 class="author">Posted by {{ forum.user }} at {{ forum.created_at }}</h4>
-							<h4>{{ forum.totalComments }} Comments</h4>
 						</div>
 					</div>
 					<div class="row">
 						
-							<h4 class="CommentHeader">Comments</h4>
+							<h4 class="CommentHeader">{{ forum.totalComments }} Comments</h4>
 							{% for comment in forum.comment_set.all %}
 								<div class="well">
 									<h5>{{ comment.forum_comment }}</h5>
