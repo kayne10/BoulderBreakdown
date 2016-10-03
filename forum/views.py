@@ -47,6 +47,8 @@ def create_comment(request, forum_id):
             comment.forum = forum
             comment.user = request.user
             comment.save()
+            forum.totalComments = forum.comment_set.count()
+            forum.save()
             return render(request, 'forum/detail.html', {'forum': forum})
         context = {
             'forum': forum,

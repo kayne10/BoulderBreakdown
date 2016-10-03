@@ -11,7 +11,7 @@ class Forum(models.Model):
 	article_subject = models.CharField(max_length=250)
 	article_body = models.TextField(max_length=2000)
 	created_at = models.DateTimeField(auto_now_add=True)
-	# comments = models.PositiveIntegerField()
+	totalComments = models.IntegerField(default=0)
 
 	def __str__(self):
 		return self.article_title + '-' + self.user.username
