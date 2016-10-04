@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load social_widgets %}
 <link href="https://fonts.googleapis.com/css?family=Abel|Homenaje|Syncopate" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'hikes/style.css' %}">
@@ -79,9 +80,10 @@
         <div class="panel-body">
           <h4>Connect with us</h4>
           <ul>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
+            <li>{% social_widget_render "facebook/follow_button.html" href="https://www.facebook.com/zuck" %}</li>
+            <li>{% social_widget_render "twitter/follow_button.html" username="BillGates" %}</li>
+            <li>{% social_widget_render "google/plus_share_button.html" href="https://www.google.com" %}</li>
+            <li>{% social_widget_render "instagram/badge.html" size=32 username="nike" %}</li>
           </ul>
         </div>
       </div>
