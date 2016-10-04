@@ -19,12 +19,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        
-                            <h4><strong>Comments</strong></h4>
+                            <!-- Display all comments -->
+                            <h4 class="CommentHeader">{{ forum.totalComments }} Comments</h4>
                             {% for comment in forum.comment_set.all %}
                                 <div class="well">
                                     <h5>{{ comment.forum_comment }}</h5>
-                                    <p>Posted by {{ comment.user }}</p>
+                                    <h6 class="author">Posted by {{ comment.user }} at {{ comment.created_at }}</h6>
                                 </div>
                             {% endfor %}
                     </div>
